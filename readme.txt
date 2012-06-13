@@ -8,10 +8,10 @@ Tags: theme, variables, template, text data
 Requires at least: 3.0.0
 Tested up to: 3.3.2
 Donate link: http://justcoded.com
-License: GNU Public License
+License: GNU General Public License v2
 Stable tag: trunk
 
-This plugin add custom page with theme text variables to use inside the templates.
+This plugin add custom page with theme text variables (configurable) to use inside the templates.
 
 == Description ==
 
