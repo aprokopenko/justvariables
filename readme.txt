@@ -20,6 +20,10 @@ Once you added at least one variabel - the new page Theme Variables will appear 
 You can move all your text data (like copyright text, phone numbers, address etc) to variables.
 So if final client want to change this text - he can do this easily from admin without editing the template.
 
+This project is also available on github.com:
+https://github.com/aprokopenko/justvariables.
+You can post issues, bugs and your suggestion in Issues tracker there.
+
 == Installation ==
 
 1. Download, unzip and upload to your WordPress plugins directory
