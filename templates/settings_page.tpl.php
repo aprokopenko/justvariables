@@ -1,7 +1,7 @@
 <div class="wrap">
 	<div class="icon32 icon32-posts-page" id="icon-edit"><br></div>
 	<h2><?php _e('Just Variables', JV_TEXTDOMAIN); ?></h2>
-	<p>Create at least one variable to unblock "Theme Variables" page.</p>
+	<p><?php _e('Create at least one variable to unblock "Theme Variables" page.', JV_TEXTDOMAIN); ?></p>
 	
 	<form action="?page=just_variables" method="post">
 	<fieldset>

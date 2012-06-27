@@ -1,17 +1,17 @@
 <?php
 /*
 Plugin Name: Just Variables for Wordpress
-Plugin URI: 
+Plugin URI: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/
 Description: This plugin add custom page with theme text variables to use inside the templates.
 Tags: theme, variables, template, text data
 Author: Alexander Prokopenko
 Author URI: http://justcoded.com/
-Version: 0.1
-Donate link: 
+Version: 1.0
+Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 */
 
 define('JV_ROOT', dirname(__FILE__));
-define('JV_TEXTDOMAIN', 'just-variables');
+define('JV_TEXTDOMAIN', 'just-wp-variables');
 
 if(!function_exists('pa')){
 function pa($mixed, $stop = false) {
