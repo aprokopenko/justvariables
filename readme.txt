@@ -6,7 +6,7 @@ Author: Alexander Prokopenko
 Author URI: http://justcoded.com/
 Tags: theme, variables, template, text data
 Requires at least: 3.0.0
-Tested up to: 3.4
+Tested up to: 3.4.1
 Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 License: GNU General Public License v2
 Stable tag: trunk
@@ -44,6 +44,8 @@ You can post issues, bugs and your suggestion in Issues tracker there.
 2. Theme Variables page under Appearance menu
 
 == Changelog ==
+* Version 1.1 :
+	* Bug fix: emergency fix for WP 3.4.1 (https://github.com/aprokopenko/justvariables/issues/3)
 * Version 1.0 :
 	* Tested and added language support, added Russian language
 * Version 0.1 :

@@ -1,3 +1,6 @@
+<?php
+	$assets_path = WP_PLUGIN_URL.'/just-wp-variables/assets';
+?>
 <div class="wrap">
 	<div class="icon32 icon32-posts-page" id="icon-edit"><br></div>
 	<h2><?php _e('Just Variables', JV_TEXTDOMAIN); ?></h2>
@@ -28,7 +31,7 @@
 					<td class="td_input"><input type="text" name="jv_settings[slug][]" value="" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[title][]" value="" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[default][]" value="" placeholder="<?php _e('Default Value', JV_TEXTDOMAIN); ?>" class="regular-text" /></td>
-					<td class="minwidth"><a href="#" class="delete_variable" title="<?php _e('Delete', JV_TEXTDOMAIN); ?>"><img src="<?php echo get_template_directory_uri(); ?>/theme-installer/images/icon-delete.png" title="Delete" alt="Delete" /></a></td>
+					<td class="minwidth"><a href="#" class="delete_variable" title="<?php _e('Delete', JV_TEXTDOMAIN); ?>"><img src="<?php echo $assets_path; ?>/icon-delete.png" title="Delete" alt="Delete" /></a></td>
 				</tr>
 				<?php foreach($variables as $slug => $var) : ?>
 				<tr>
@@ -42,7 +45,7 @@
 					<td class="td_input"><input type="text" name="jv_settings[slug][]" value="<?php echo esc_attr($slug); ?>" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[title][]" value="<?php echo esc_attr($var['name']); ?>" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[default][]" value="<?php echo esc_attr($var['default']); ?>" placeholder="<?php _e('Default Value', JV_TEXTDOMAIN); ?>" class="regular-text" /></td>
-					<td class="minwidth"><a href="#" class="delete_variable" title="<?php _e('Delete', JV_TEXTDOMAIN); ?>"><img src="<?php echo get_template_directory_uri(); ?>/theme-installer/images/icon-delete.png" title="Delete" alt="Delete" /></a></td>
+					<td class="minwidth"><a href="#" class="delete_variable" title="<?php _e('Delete', JV_TEXTDOMAIN); ?>"><img src="<?php echo $assets_path; ?>/icon-delete.png" title="Delete" alt="Delete" /></a></td>
 				</tr>
 				<?php endforeach; ?>
 			</tbody>

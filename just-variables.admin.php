@@ -10,11 +10,13 @@
 	/**
 	* Properly enqueue styles and scripts for our theme options page.
 	*/
+	add_action( 'admin_print_styles', 'jv_admin_styles' );
+	function jv_admin_styles( $hook_suffix ) {
+		wp_enqueue_style( 'just_variables', plugins_url( 'assets/styles.css' , __FILE__ ) );
+	}
+
 	add_action( 'admin_print_scripts', 'jv_admin_scripts' );
 	function jv_admin_scripts( $hook_suffix ) {
-		// styles
-		wp_enqueue_style( 'just_variables', plugins_url( 'assets/styles.css' , __FILE__ ) );
-		// js
 		wp_enqueue_script( 'just_variables',
 				plugins_url( 'assets/settings_page.js' , __FILE__ ),
 				array( 'jquery', 'jquery-ui-sortable' ) );
