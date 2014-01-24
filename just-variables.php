@@ -50,7 +50,7 @@ function jv_init(){
  *	@return string  return variable value or NULL
  */
 function jv_get_variable_value( $var ){
-	$values = get_option('jv_values');
+	$values = get_option('jv_variables');
 	if( !empty($values[$var]) ){
 		return $values[$var];
 	}
@@ -68,10 +68,10 @@ function jv_get_variable_value( $var ){
 function just_variable( $var, $echo = true ){
 	$value = jv_get_variable_value( $var );
 	if( !is_null($value) && $echo ){
-		echo $value;
+		echo $value['default'];
 	}
 	else{
-		return $value;
+		return $value['default'];
 	}
 }
 
