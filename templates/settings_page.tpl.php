@@ -1,5 +1,5 @@
 <?php
-	$assets_path = WP_PLUGIN_URL.'/just-variables/assets';
+	$assets_path = WP_PLUGIN_URL.'/just-wp-variables/assets';
 ?>
 <div class="wrap">
 	<div class="icon32 icon32-posts-page" id="icon-edit"><br></div>
