@@ -6,7 +6,7 @@ Author: Alexander Prokopenko
 Author URI: http://justcoded.com/
 Tags: theme, variables, template, text data
 Requires at least: 3.0.0
-Tested up to: 3.4.1
+Tested up to: 4.0
 Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 License: GNU General Public License v2
 Stable tag: trunk
@@ -44,6 +44,10 @@ You can post issues, bugs and your suggestion in Issues tracker there.
 2. Theme Variables page under Appearance menu
 
 == Changelog ==
+* Version 1.2:
+	* New: added info how to get value without printing it
+	* New: added HTML5 placeholder for inputs. This will help clients to see how to enter data correctly
+	* Bug fix: Broken "delete" icon in admin page
 * Version 1.1 :
 	* Bug fix: emergency fix for WP 3.4.1 (https://github.com/aprokopenko/justvariables/issues/3)
 * Version 1.0 :

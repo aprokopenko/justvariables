@@ -53,7 +53,7 @@ function jv_theme_vars_admin_page(){
 				$values = get_option('jv_values');
 			?>
 			<p><?php _e('You can use the text variables below in your template files or post content with shortcode.', JV_TEXTDOMAIN ); ?></p>
-			<p><?php _e('Template files usage example: <code>&lt;?php just_variable( "code for variable" ); ?&gt;</code><br/>Shortcode example: <code>[justvar code="code for variable"]</code>', JV_TEXTDOMAIN ); ?></p>
+			<p><?php _e('Template files usage example: <code>&lt;?php just_variable( "code for variable" ); ?&gt;</code><br/>Get variable value (no print): <code>&lt;?php just_variable( "code for variable", FALSE ); ?&gt;</code><br/>Shortcode example: <code>[justvar code="code for variable"]</code>', JV_TEXTDOMAIN ); ?></p>
 			<table class="form-table">
 			<tbody>
 				<?php
@@ -64,9 +64,9 @@ function jv_theme_vars_admin_page(){
 					<th scope="row"><?php echo $var['name']; ?><br/><small><?php _e('code:', JV_TEXTDOMAIN); echo ' '. $slug; ?></small></th>
 					<td>
 						<?php if( $var['type'] == 'text' ) : ?>
-							<input class="regular-text" type="text" value="<?php echo esc_attr($value); ?>" name="jv_values[<?php echo $slug; ?>]">
+							<input class="regular-text" type="text" placeholder="<?php echo esc_attr($var['placeholder']); ?>" value="<?php echo esc_attr($value); ?>" name="jv_values[<?php echo $slug; ?>]">
 						<?php elseif( $var['type'] == 'textarea' ) : ?>
-							<textarea name="jv_values[<?php echo $slug; ?>]" cols="80" rows="3"><?php echo esc_html($value); ?></textarea>
+							<textarea placeholder="<?php echo esc_attr($var['placeholder']); ?>" name="jv_values[<?php echo $slug; ?>]" cols="80" rows="3"><?php echo esc_html($value); ?></textarea>
 						<?php endif; ?>
 					</td>
 				</tr>

@@ -6,7 +6,7 @@ Description: This plugin add custom page with theme text variables to use inside
 Tags: theme, variables, template, text data
 Author: Alexander Prokopenko
 Author URI: http://justcoded.com/
-Version: 1.1
+Version: 1.2
 Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 */
 

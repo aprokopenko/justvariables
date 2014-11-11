@@ -1,5 +1,5 @@
 <?php
-	$assets_path = WP_PLUGIN_URL.'/just-wp-variables/assets';
+	$assets_path = WP_PLUGIN_URL.'/just-variables/assets';
 ?>
 <div class="wrap">
 	<div class="icon32 icon32-posts-page" id="icon-edit"><br></div>
@@ -16,6 +16,7 @@
 					<th class="td_input"><?php _e('Variable', JV_TEXTDOMAIN); ?></th>
 					<th class="td_input"><?php _e('Title', JV_TEXTDOMAIN); ?></th>
 					<th class="td_input"><?php _e('Default Value', JV_TEXTDOMAIN); ?></th>
+					<th class="td_input"><?php _e('Inline hint', JV_TEXTDOMAIN); ?></th>
 					<th class="minwidth">&nbsp;</th>
 				</tr>
 			</thead>
@@ -31,6 +32,7 @@
 					<td class="td_input"><input type="text" name="jv_settings[slug][]" value="" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[title][]" value="" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[default][]" value="" placeholder="<?php _e('Default Value', JV_TEXTDOMAIN); ?>" class="regular-text" /></td>
+					<td class="td_input"><input type="text" name="jv_settings[placeholder][]" value="" placeholder="<?php _e('Inline hint (disappear on edit)', JV_TEXTDOMAIN); ?>" class="regular-text" /></td>
 					<td class="minwidth"><a href="#" class="delete_variable" title="<?php _e('Delete', JV_TEXTDOMAIN); ?>"><img src="<?php echo $assets_path; ?>/icon-delete.png" title="Delete" alt="Delete" /></a></td>
 				</tr>
 				<?php foreach($variables as $slug => $var) : ?>
@@ -45,6 +47,7 @@
 					<td class="td_input"><input type="text" name="jv_settings[slug][]" value="<?php echo esc_attr($slug); ?>" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[title][]" value="<?php echo esc_attr($var['name']); ?>" class="regular-text" /></td>
 					<td class="td_input"><input type="text" name="jv_settings[default][]" value="<?php echo esc_attr($var['default']); ?>" placeholder="<?php _e('Default Value', JV_TEXTDOMAIN); ?>" class="regular-text" /></td>
+					<td class="td_input"><input type="text" name="jv_settings[placeholder][]" value="<?php echo esc_attr($var['placeholder']); ?>" placeholder="<?php _e('Inline hint (disappear on edit)', JV_TEXTDOMAIN); ?>" class="regular-text" /></td>
 					<td class="minwidth"><a href="#" class="delete_variable" title="<?php _e('Delete', JV_TEXTDOMAIN); ?>"><img src="<?php echo $assets_path; ?>/icon-delete.png" title="Delete" alt="Delete" /></a></td>
 				</tr>
 				<?php endforeach; ?>

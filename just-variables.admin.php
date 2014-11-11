@@ -55,6 +55,7 @@
 						'slug' => $post['slug'][$key],
 						'name' => $post['title'][$key],
 						'default' => $post['default'][$key],
+						'placeholder' => $post['placeholder'][$key],
 					);
 					
 				}
