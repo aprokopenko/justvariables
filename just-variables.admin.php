@@ -50,17 +50,17 @@
 				foreach($post['slug'] as $key => $slug){
 					if( $key == 0 ) continue; // 0 index is empty row for copy
 					
-					$variables[ $slug ] = array(
+					$variables[ str_replace("\\\\", "", $slug) ] = array(
 						'type' => $post['type'][$key],
-						'slug' => $post['slug'][$key],
-						'name' => $post['title'][$key],
-						'default' => $post['default'][$key],
-						'placeholder' => $post['placeholder'][$key],
+						'slug' => str_replace("\\\\", "", $post['slug'][$key]),
+						'name' => str_replace("\\\\", "", $post['title'][$key]),
+						'default' => str_replace("\\\\", "", $post['default'][$key]),
+						'placeholder' => str_replace("\\\\", "", $post['placeholder'][$key]),
 					);
 					
 				}
 				//pa($variables,1);
-				
+
 				// update DB
 				update_option('jv_variables', $variables);
 				
