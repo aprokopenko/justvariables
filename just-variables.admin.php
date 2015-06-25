@@ -42,22 +42,21 @@
 		
 		// Form submit processing
 		if( !empty($_POST['submitted']) && !empty($_POST['jv_settings']) ){
-			
-			$post = $_POST['jv_settings'];
+
+			$post = array_map( 'stripslashes_deep', $_POST['jv_settings']);
 			// update database with new values
 			$variables = array();
 			if( !empty($post['slug']) ){
 				foreach($post['slug'] as $key => $slug){
 					if( $key == 0 ) continue; // 0 index is empty row for copy
 					
-					$variables[ str_replace("\\\\", "", $slug) ] = array(
+					$variables[ $slug ] = array(
 						'type' => $post['type'][$key],
-						'slug' => str_replace("\\\\", "", $post['slug'][$key]),
-						'name' => str_replace("\\\\", "", $post['title'][$key]),
-						'default' => str_replace("\\\\", "", $post['default'][$key]),
-						'placeholder' => str_replace("\\\\", "", $post['placeholder'][$key]),
+						'slug' => $post['slug'][$key],
+						'name' => $post['title'][$key],
+						'default' => $post['default'][$key],
+						'placeholder' => $post['placeholder'][$key],
 					);
-					
 				}
 				//pa($variables,1);
 
