@@ -42,8 +42,8 @@
 		
 		// Form submit processing
 		if( !empty($_POST['submitted']) && !empty($_POST['jv_settings']) ){
-			
-			$post = $_POST['jv_settings'];
+
+			$post = array_map( 'stripslashes_deep', $_POST['jv_settings']);
 			// update database with new values
 			$variables = array();
 			if( !empty($post['slug']) ){
@@ -57,10 +57,9 @@
 						'default' => $post['default'][$key],
 						'placeholder' => $post['placeholder'][$key],
 					);
-					
 				}
 				//pa($variables,1);
-				
+
 				// update DB
 				update_option('jv_variables', $variables);
 				
