@@ -6,12 +6,14 @@ Description: This plugin add custom page with theme text variables to use inside
 Tags: theme, variables, template, text data
 Author: Alexander Prokopenko
 Author URI: http://justcoded.com/
-Version: 1.2.1
+Version: 1.1
 Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 */
 
 define('JV_ROOT', dirname(__FILE__));
 define('JV_TEXTDOMAIN', 'just-wp-variables');
+define('JV_CONF_MS_SITE', 'site');
+define('JV_CONF_MS_NETWORK', 'network');
 
 if(!function_exists('pa')){
 function pa($mixed, $stop = false) {
@@ -90,6 +92,38 @@ function just_variable_shortcode( $atts ){
 }
 add_shortcode('justvar', 'just_variable_shortcode');
 
+/**
+ * add message to be printed with admin notice
+ * @param string $type    notice|error
+ * @param string $message  message to be printed
+ */
+function jv_add_admin_notice( $type, $message ){
+	global $jv_notices;
+	if( !$jv_notices )
+		$jv_notices = array();
+	
+	$jv_notices[] = array($type, $message);
+}
 
+/**
+ *	Function for update saving method
+ *	@return string Return read method from file or database
+ */
+function jv_update_read_settings(){
+	$current_value = jv_get_read_settings();
+	$new_value = $_POST['jv_read_settings'];
 
+	if( MULTISITE && ($_POST['jv_multisite_setting'] != JV_CONF_MS_NETWORK && $new_value == JV_CONF_SOURCE_FS_GLOBAL) ){
+		jv_add_admin_notice('error', __('<strong>Settings storage update FAILED!</strong>. Your MultiSite Settings do not allow to set global storage in FileSystem', JCF_TEXTDOMAIN));
+		return $current_value;
+	}
+}
+
+/**
+ *	Get read sttings
+ *	@return string Return read method from file or database
+ */
+function jv_get_read_settings(){
+	return get_site_option('jv_read_settings');
+}
 ?>
