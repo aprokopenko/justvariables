@@ -41,7 +41,7 @@ function jv_theme_vars_admin_page(){
 	?>
 	<div class="wrap">
 		<?php screen_icon(); ?>
-		<h2><?php printf( __( '%s Theme Variables', JV_TEXTDOMAIN ), get_current_theme() ); ?></h2>
+		<h2><?php printf( __( '%s Theme Variables', JV_TEXTDOMAIN ), wp_get_theme() ); ?></h2>
 		<?php settings_errors(); ?>
 
 		<form method="post" action="options.php">
