@@ -5,8 +5,8 @@ Plugin URI: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin
 Author: Alexander Prokopenko
 Author URI: http://justcoded.com/
 Tags: theme, variables, template, text data
-Requires at least: 3.0.0
-Tested up to: 4.2.3
+Requires at least: 3.4
+Tested up to: 4.5.2
 Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 License: GNU General Public License v2
 Stable tag: trunk
@@ -44,6 +44,8 @@ You can post issues, bugs and your suggestion in Issues tracker there.
 2. Theme Variables page under Appearance menu
 
 == Changelog ==
+* Version 1.2.2:
+	* Bug fix: Updated deprecated function get_current_theme()
 * Version 1.2.1:
 	* Bug fix: Duplicated slashes before quotes on settings pages
 * Version 1.2:
