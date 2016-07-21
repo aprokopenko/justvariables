@@ -2,7 +2,7 @@
 Contributors: aprokopenko
 Plugin Name: Just Variables for Wordpress
 Plugin URI: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/
-Author: Alexander Prokopenko
+Author: JustCoded / Alex Prokopenko
 Author URI: http://justcoded.com/
 Tags: theme, variables, template, text data
 Requires at least: 3.4
