@@ -40,7 +40,6 @@ function jv_theme_variables_register_settins(){
 function jv_theme_vars_admin_page(){
 	?>
 	<div class="wrap">
-		<?php screen_icon(); ?>
 		<h2><?php printf( __( '%s Theme Variables', JV_TEXTDOMAIN ), wp_get_theme() ); ?></h2>
 		<?php settings_errors(); ?>
 

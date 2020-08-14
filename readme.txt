@@ -6,7 +6,7 @@ Author: JustCoded / Alex Prokopenko
 Author URI: http://justcoded.com/
 Tags: theme, variables, template, text data
 Requires at least: 3.4
-Tested up to: 4.5.2
+Tested up to: 5.5
 Donate link: http://justcoded.com/just-labs/just-wordpress-theme-variables-plugin/#donate
 License: GNU General Public License v2
 Stable tag: trunk
@@ -49,6 +49,8 @@ To upgrade remove the old plugin folder. After than follow the installation step
 A: If you have inserted a template function from this plugin to your templates, then you probably get error about missing functions. You will need to clean up your template files from function calls.
 
 == Changelog ==
+* Version 1.2.3:
+	* Bug fix: Removed deprecated function screen_icon() and updated issue with jQuery Migrate
 * Version 1.2.2:
 	* Bug fix: Updated deprecated function get_current_theme()
 * Version 1.2.1:
