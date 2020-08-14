@@ -6,7 +6,7 @@ Description: This plugin add custom page with theme text variables to use inside
 Tags: theme, variables, template, text data
 Author: JustCoded / Alex Prokopenko
 Author URI: http://justcoded.com/
-Version: 1.2.2
+Version: 1.2.3
 */
 
 define('JV_ROOT', dirname(__FILE__));
@@ -29,12 +29,12 @@ require_once( JV_ROOT . '/just-variables.theme.php' );
 add_action('plugins_loaded', 'jv_init');
 function jv_init(){
 	if( !is_admin() ) return;
-	
+
 	/**
 	 *	load translations
 	 */
 	load_plugin_textdomain( JV_TEXTDOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	
+
 	// add admin page
 	add_action( 'admin_menu', 'jv_admin_menu' );
 }
@@ -53,7 +53,7 @@ function jv_get_variable_value( $var ){
 	if( !empty($values[$var]) ){
 		return $values[$var];
 	}
-	
+
 	return NULL;
 }
 

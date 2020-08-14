@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
 	});
 	
 	// init delete button
-	jQuery('#jv_settings a.delete_variable').live('click', function(){
+	jQuery('#jv_settings a.delete_variable').on('click', function(){
 		if( confirm( text_just_variables.confirm_delete ) ){
 			jQuery(this).parents('tr:first').remove();
 		}
